@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('web design/possible background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(212, 219, 212);
+    
+}
+.logo{
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    width: 180px;
+    height: 100px;
+}
+
+header {
+    position: fixed;
+    height: 5%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);/*if not what it should be scheck here*/
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    top: 0;
+
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .navbar{
+    
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    flex-grow: 1;
+    margin-left: 60px;
+    height: 5%;
+    
+    
+}
+
+
+.navbar a {
+    
+    font-size: 20px;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    color: rgb(18, 30, 40);
+    border:2px solid rgba(72, 113, 10, 0.5);
+    border-radius: 5px;
+    background-color: rgba(72, 113, 10, 0.5);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+header .navbar a:hover{
+    color: rgb(28, 3, 52);
+    border:2px solid rgba(72, 113, 10, 1);
+    background:rgba(72, 113, 10, 1);
+}
+main{
+    margin-top: 100px;
+}
+/*.images img{
+    margin: 0 20px;
+}*/
+.images:first-child{
+    margin-right: 200px;
+}
+.images:nth-child(2){
+    margin: 0 1000px;
+}
