@@ -10,15 +10,15 @@ body {
     border-radius: 40px;
     border: none;
     outline: none;
-    width: 180px;
-    height: 100px;
+    width: 100px;
+    height: 70px;
 }
 
 header {
     position: fixed;
     height: 5%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);/*if not what it should be scheck here*/
+    background: black;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -38,9 +38,9 @@ header .navbar{
     
     display: flex;
     align-items: center;
-    gap: 200px;
+    gap: 20px;
     flex-grow: 1;
-    margin-left: 60px;
+    margin-left: 40px;
     height: 5%;
     
     
@@ -60,6 +60,7 @@ header .navbar{
     text-decoration: none;
     padding: 10px 15px;
     transition: background-color 0.3s, border-color 0.3s;
+    font-weight: bold;
 }
 header .navbar a:hover{
     color: rgb(28, 3, 52);
