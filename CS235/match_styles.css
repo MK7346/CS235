@@ -1,0 +1,115 @@
+.heading{background-color: black;
+color: white;
+padding: 10px;
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.matchtitle{
+    padding-right: 10px;
+}
+
+.heading1{
+    text-align: center;
+}
+
+.btn{
+  background-color: black;
+  border-style: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  color:white;
+}
+
+.small-input {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .team {
+    margin-bottom: 20px; /* Add space between the team select and player section */
+  }
+  
+  .player {
+    margin-bottom: 10px; /* Add space between each player section */
+  }
+  
+
+.player{padding:10px;}
+
+  .team1{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #yellowCard2{
+    padding: 10px;
+  }
+
+
+  .fixture {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; 
+    margin: 0 auto; 
+}
+
+.team img {
+    width: 75px;
+    height: 75px; 
+  
+}
+
+.team1 img {
+    width: 75px;
+    height: 75px; 
+  
+}
+
+.vs{
+    font-size: 300%;
+    font-weight: bolder;
+}
+
+.time{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 28px;
+    color: grey;
+}
+
+.space{ display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%; 
+    margin: 0 auto; 
+}
+
+.size{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+#players{
+    margin-top: -20px;
+}
