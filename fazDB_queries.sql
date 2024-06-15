@@ -38,8 +38,9 @@ CREATE TABLE `match_player` (
   `sub_id` int,
   `time` int,
   `match_id` int,
-  PRIMARY KEY (`position`),
-  FOREIGN KEY (`player_id`) REFERENCES `player`(`player_id`)
+  PRIMARY KEY (`match_id`,`player_id`),
+  FOREIGN KEY (`player_id`) REFERENCES `player`(`player_id`),
+  FOREIGN KEY (`match_id`) REFERENCES `match`(`match_id`)
 );
 
 CREATE TABLE `referee` (
