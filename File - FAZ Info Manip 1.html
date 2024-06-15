@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>FAZ Admin Login 🙂</title>
+    <style>
+        body {
+            font-family: times new roman;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: #11cb80;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: black;
+            text-align: left;
+        }
+
+        input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: grey;
+            border-radius: 11px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "login-container">
+        <h2>FAZ Admin Login</h2>
+        <div id = "error-message" class = "error"></div>
+        <form id = "login-form" onsubmit = "handleLogin(event)">
+            <label for = "username">Username</label>
+            <input type = "text" id = "username" name = "username" required>
+
+            <label for = "password">Password</label>
+            <input type ="password" id = "password" name = "password" required>
+
+            <button type = "submit">Login</button>
+        </form>
+    </div>
+    <script>
+        //Admin info for (this part is just to show how it would work as more of this is needed to link with the database)
+        const admins = [
+            { username: 'admin1', password: 'defaultpsswrd1' },
+            { username: 'admin2', password: 'defaultpsswrd2' }
+        ];
+
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            const admin = admins.find(admin => admin.username === username);
+
+            if (admin && admin.password === password) {
+                errorMessage.textContent = '';
+                // Redirect to admin dashboard (this is just a placeholder)
+                window.location.href = '/dashboard';
+            } else {
+                errorMessage.textContent = 'Invalid username or password';
+            }
+        }
+    </script>
+</body>
+</html>
