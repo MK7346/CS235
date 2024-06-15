@@ -79,3 +79,47 @@ main{
 .images:nth-child(2){
     margin: 0 1000px;
 }
+/*this is supposed to adjust the stuff on the site accordingly*/
+@media all {
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo{
+        width: 150px;
+        height: 80px;
+    }
+    .navbar a{
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+}
+
+@media all {
+    .logo{
+        width: 120px;
+        height: 60px;
+    }
+    .navbar a{
+        font-size: 16px;
+        padding: 6px 10px;
+    }
+}
+/*the following code is to make the match on the homepage look as it should i.e 
+it is horizontal*/
+.match-info{
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+.match-info .teams img{
+    max-width: 150px;
+    height: auto;
+    
+}
+.match-info .teams span{
+    font-size: 24px;
+    color: white;
+    
+}
