@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Form for adding new teams -->
+        <form id="teamForm">
+            <div class="form-group">
+                <label for="teamId">Team ID:</label>
+                <input type="text" id="teamId" name="teamId" required>
+            </div>
+            <div class="form-group">
+                <label for="teamName">Team Name:</label>
+                <input type="text" id="teamName" name="teamName" required>
+            </div>
+            <div class="form-group">
+                <label for="mainStadium">Main Stadium:</label>
+                <input type="text" id="mainStadium" name="mainStadium" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <input type="submit" value="Add Team" class="btn">
+        </form>
+
+        <!-- Table for displaying existing teams -->
+        <table id="teamTable">
+            <tr>
+                <th>Team ID</th>
+                <th>Team Name</th>
+                <th>Main Stadium</th>
+                <th>City</th>
+            </tr>
+            <!-- Existing teams will be added here -->
+        </table>
+    </div>
+</body>
+</html>

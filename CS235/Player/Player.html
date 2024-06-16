@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Player Page</title>
+    <style>
+        /* CSS for styling the page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .btn {
+            background-color: #008CBA;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Form for adding new players -->
+        <form id="playerForm">
+            <div class="form-group">
+                <label for="playerId">Player ID:</label>
+                <input type="text" id="playerId" name="playerId" required>
+            </div>
+            <div class="form-group">
+                <label for="playerName">Player Name:</label>
+                <input type="text" id="playerName" name="playerName" required>
+            </div>
+            <div class="form-group">
+                <label for="teamId">Team ID:</label>
+                <input type="text" id="teamId" name="teamId" required>
+            </div>
+            <div class="form-group">
+                <label for="DoB">DoB:</label>
+                <input type="Date" id="DoB" name="DateOfBirth" required>
+            </div>
+            <div class="form-group">
+                <label for="StartYear">Start Year:</label>
+                <input type="number" id="StartYear" name="StartYear" required>
+            </div>
+            <div class="form-group">
+                <label for="ShirtNumber">Shirt Number:</label>
+                <input type="number" id="ShirtNumber" name="ShirtNumber" required>
+            </div>
+            <input type="submit" value="Add Player" class="btn">
+        </form>
+
+        <!-- Table for displaying existing players -->
+        <table id="playerTable">
+            <tr>
+                <th>Player ID</th>
+                <th>Player Name</th>
+                <th>Team ID</th>
+                <th>Date Of Birth</th>
+                <th>Start Year</th>
+                <th>Shirt Number</th>
+            </tr>
+            <!-- Existing players will be added here -->
+        </table>
+    </div>
+
+    <script>
+        // JavaScript for form validation and handling form submission
+        document.getElementById('playerForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent form from submitting normally
+
+            // Get form values
+            var playerId = document.getElementById('playerId').value;
+            var playerName = document.getElementById('playerName').value;
+            var teamId = document.getElementById('teamId').value;
+            var position = document.getElementById('DoB').value;
+            var position = document.getElementById('StartYear').value;
+            var position = document.getElementById('ShirtNumber').value;
+
+            // Validate form values
+            if (!playerId || !playerName || !teamId || !position) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Add new player to the table
+            var table = document.getElementById('playerTable');
+            var row = table.insertRow(-1);
+            row.insertCell(0).innerHTML = playerId;
+            row.insertCell(1).innerHTML = playerName;
+            row.insertCell(2).innerHTML = teamId;
+            row.insertCell(3).innerHTML = DoB;
+            row.insertCell(4).innerHTML = StartYear;
+            row.insertCell(5).innerHTML = ShirtNumber;
+
+            // Clear form
+            document.getElementById('playerForm').reset();
+        });
+    </script>
+</body>
+</html>
